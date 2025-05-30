@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/pages/ListContent.dart';
 import 'package:flutter_application_1/pages/home.dart';
+import 'package:flutter_application_1/pages/preferencias.dart';
 
 class AboutPage extends StatefulWidget{
   const AboutPage({super.key});
@@ -11,8 +12,8 @@ class AboutPage extends StatefulWidget{
 
 class _AboutPage extends State<AboutPage>{
 
-  void backPage(){
-    Navigator.pop(context);
+  void prefPage(){
+    Navigator.push(context, MaterialPageRoute(builder: (context) => const Preferencias()));
   }
 
   @override
@@ -60,7 +61,7 @@ class _AboutPage extends State<AboutPage>{
               Row( 
                 mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                 children: <Widget> [
-                  TextButton(onPressed: backPage, child: const Text('Volver'),),
+                  TextButton(onPressed: prefPage, child: const Text('Preferencias'),),
                   //TextButton(onPressed: nextPage, child: const Text('About'),),
                 ]
               )
